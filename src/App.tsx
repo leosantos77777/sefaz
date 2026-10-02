@@ -10,13 +10,16 @@ import {
   Users
 } from 'lucide-react';
 
+// ==========================================
+// LINK DO SEU GRUPO (WHATSAPP / TELEGRAM)
+// ==========================================
+export const GROUP_URL = 'https://chat.whatsapp.com/Csao7Rstq5S3QvBukNovC8';
+
 export default function App() {
   const [memberCount, setMemberCount] = useState(1847);
-  const groupUrl = 'https://discursiva-sefaz-al.apostolosconcursos.com.br/';
 
-  const handleJoinGroup = () => {
+  const handleClick = () => {
     setMemberCount((prev) => prev + 1);
-    window.open(groupUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -65,16 +68,19 @@ export default function App() {
         </div>
 
         {/* ============================================================== */}
-        {/* THE MAIN ACTION BUTTON (THE ABSOLUTE CENTER OF ATTENTION) */}
+        {/* THE MAIN ACTION BUTTON (NATIVE LINK DIRECTLY TO THE GROUP) */}
         {/* ============================================================== */}
         <div className="relative w-full group">
           {/* High Intensity Ambient Glow */}
           <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-500 rounded-3xl blur-xl opacity-80 group-hover:opacity-100 transition duration-300 animate-pulse-glow" />
 
-          {/* Magnetic Main CTA */}
-          <button
-            onClick={handleJoinGroup}
-            className="relative w-full bg-[#10b981] hover:bg-[#059669] text-white rounded-2xl py-5 px-6 sm:px-8 flex items-center justify-center gap-3 sm:gap-4 shadow-2xl transition-all duration-200 transform active:scale-[0.98] cursor-pointer focus:outline-none focus:ring-4 focus:ring-emerald-400/50"
+          {/* Magnetic Main CTA as a native <a> link */}
+          <a
+            href={GROUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleClick}
+            className="relative w-full bg-[#10b981] hover:bg-[#059669] text-white rounded-2xl py-5 px-6 sm:px-8 flex items-center justify-center gap-3 sm:gap-4 shadow-2xl transition-all duration-200 transform active:scale-[0.98] cursor-pointer focus:outline-none focus:ring-4 focus:ring-emerald-400/50 no-underline"
           >
             {/* Shimmer sweep effect */}
             <div className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none animate-shimmer" />
@@ -94,7 +100,7 @@ export default function App() {
                 Toque para entrar diretamente agora
               </span>
             </div>
-          </button>
+          </a>
         </div>
         {/* ============================================================== */}
         {/* END OF MAIN ACTION BUTTON */}
