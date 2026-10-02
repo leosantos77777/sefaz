@@ -1,0 +1,6 @@
+{
+  "name": "Discursiva SEFAZ-AL | Apóstolos Concursos",
+  "description": "Página de alta conversão para entrada no grupo exclusivo de preparação para a Prova Discursiva SEFAZ-AL com Auditores Fiscais da Apóstolos Concursos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
